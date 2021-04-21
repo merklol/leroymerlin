@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.maximcode.leroymerlin.ui.home.HomeFragment"
+        android:label=""
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_search"
+            app:destination="@id/navigation_search" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.maximcode.leroymerlin.ui.list.ListFragment"
+        android:label=""
+        tools:layout="@layout/fragment_list" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.maximcode.leroymerlin.ui.stores.StoresFragment"
+        android:label=""
+        tools:layout="@layout/fragment_stores" />
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.maximcode.leroymerlin.ui.search.SearchFragment"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.maximcode.leroymerlin.ui.profile.ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_cart"
+        android:name="com.maximcode.leroymerlin.ui.cart.CartFragment"
+        tools:layout="@layout/fragment_cart" />
+</navigation>
