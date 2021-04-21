@@ -1,0 +1,41 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.LeroyMerlin" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/green_500</item>
+        <item name="colorPrimaryVariant">@color/green_500</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/yellow_500</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="AppSearchView" parent="Widget.AppCompat.SearchView" >
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColorHint">@color/dark_gray</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SearchButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name= "android:textColor">@color/dark_gray</item>
+        <item name="icon">@drawable/search_icon_with_background</item>
+        <item name="iconGravity">end</item>
+        <item name="iconTint">@null</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">4dp</item>
+    </style>
+
+    <style name="CollapsedSearchButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="rippleColor">@android:color/transparent</item>
+    </style>
+
+    <style name="ListHeader" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

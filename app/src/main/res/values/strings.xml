@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">LeroyMerlin</string>
+    <string name="check_all">Check All</string>
+    <string name="up_button">Up Button</string>
+    <string name="search_products">Поиск товаров</string>
+    <string name="search">Поиск</string>
+    <string name="bar_code_button_description">Bar Code Button</string>
+    <string name="limited_offers">Предложений ограничено</string>
+    <string name="best_price">Лучшая цена</string>
+    <string name="catalogue_item_icon">catalogue item icon</string>
+    <string name="product_list_item">product list item</string>
+    <string name="home">Главная</string>
+    <string name="list">Мой Список</string>
+    <string name="stores">Магазины</string>
+    <string name="profile">Профиль</string>
+    <string name="cart">Корзина</string>
+</resources>
