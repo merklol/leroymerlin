@@ -1,5 +1,5 @@
 ## Coding assignment
->> It is a coding assignment for an Android developer trainee position at Leroy Merlin.
+> It is a coding assignment for an Android developer trainee position at Leroy Merlin.
 
 ### Task:
 
