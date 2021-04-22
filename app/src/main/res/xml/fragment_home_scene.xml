@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+           <KeyAttribute
+               motion:motionTarget="@+id/titleView"
+               motion:framePosition="50"
+               android:alpha="0.5" />
+           <KeyAttribute
+               motion:motionTarget="@+id/barCodeBtn"
+               motion:framePosition="70"
+               android:alpha="0" />
+           <KeyAttribute
+               motion:motionTarget="@+id/searchBtn"
+               motion:framePosition="70"
+               android:alpha="0" />
+           <KeyAttribute
+               motion:motionTarget="@+id/collapsedSearchBtn"
+               motion:framePosition="99"
+               android:alpha="0" />
+           <KeyAttribute
+               motion:motionTarget="@+id/collapsedSearchBtn"
+               motion:framePosition="100"
+               android:alpha="1" />
+       </KeyFrameSet>
+        <OnSwipe motion:touchAnchorId="@+id/nestedScrollView" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/actionBar"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintVertical_bias="0"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent">
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="@color/green_500"/>
+        </Constraint>
+        <Constraint
+            android:id="@+id/collapsedSearchBtn"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:visibility="invisible"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="@id/left16dpGuideline"
+            motion:layout_constraintEnd_toStartOf="@id/right16dpGuideline"
+            motion:layout_constraintBottom_toBottomOf="@id/actionBar"
+            motion:layout_constraintVertical_bias="0" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/actionBar"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:elevation="2dp"
+            android:layout_height="?attr/actionBarSize"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintVertical_bias="0"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent">
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="@color/white"/>
+        </Constraint>
+        <Constraint
+            android:id="@+id/titleView"
+            motion:layout_constraintEnd_toEndOf="@id/right16dpGuideline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:translationZ="4dp"
+            motion:layout_constraintBottom_toTopOf="@id/searchBtn"
+            motion:layout_constraintVertical_bias="1"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="@id/left16dpGuideline" />
+        <Constraint
+            android:id="@+id/searchBtn"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:visibility="invisible"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="@id/left16dpGuideline"
+            motion:layout_constraintEnd_toStartOf="@id/right80percentGuideline"
+            motion:layout_constraintBottom_toBottomOf="@id/actionBar"
+            motion:layout_constraintVertical_bias="0.85" />
+        <Constraint
+            android:id="@+id/barCodeBtn"
+            motion:layout_constraintEnd_toEndOf="@id/right16dpGuideline"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:visibility="invisible"
+            android:translationZ="4dp"
+            motion:layout_constraintBottom_toBottomOf="@id/actionBar"
+            motion:layout_constraintVertical_bias="0.85"
+            motion:layout_constraintHorizontal_bias="1"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="@id/right80percentGuideline" />
+        <Constraint
+            android:id="@+id/collapsedSearchBtn"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:translationZ="2dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="@id/left16dpGuideline"
+            motion:layout_constraintEnd_toStartOf="@id/right16dpGuideline"
+            motion:layout_constraintBottom_toBottomOf="@id/actionBar"
+            motion:layout_constraintVertical_bias="0" />
+    </ConstraintSet>
+</MotionScene>
